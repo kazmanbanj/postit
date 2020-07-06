@@ -635,3 +635,15 @@
 		text-align: center;
 		border-radius: 6px;
 	}
+
+
+
+	/* Bootstrap adj */
+	.cardmrg {
+		margin-bottom: 25px !important;
+		display: flex !important;
+	}
+
+	.archive_top {
+		margin-top: 20px;
+	}

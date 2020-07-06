@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+// use Illuminate\Routing\Controller;
+// use App\Providers\RouteServiceProvider;
 
 class SessionsController extends Controller
 {
@@ -19,7 +21,7 @@ class SessionsController extends Controller
     public function store()
     {
         // auth()->attempt(request(['email', 'password']));return redirect('/');
-        if (! auth()->attempt(request(['email', 'password']))) {
+        if ( !auth()->attempt(request(['email', 'password']))) {
             return back()->withErrors(['message'=>'Please, check your credentials and try again']);
         } return redirect()->home();
     }

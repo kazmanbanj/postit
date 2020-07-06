@@ -2,8 +2,8 @@
 
 @section ('content')
 <h1 class="text-center">Sign in</h1>
-<form action="/login" method="post">
-    {{ csrf_field() }}
+<form method="POST" action="/login">
+@csrf
 
     <div class="form form-group">
         <label for="email">Email Address:</label>

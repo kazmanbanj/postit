@@ -2,9 +2,10 @@
 
 namespace App;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+
+use App\Post;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
@@ -41,8 +42,8 @@ class User extends Authenticatable
     {
         return $this->hasMany(Post::class);
     }
-
-    public function publish (Post $post)
+ 
+    public function publish(Post $post)
     {
         $this->posts()->save($post);
 

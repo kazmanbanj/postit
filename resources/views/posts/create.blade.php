@@ -3,7 +3,7 @@
 @section('content')
 <h3 style="text-align:center">Publish a Post</h3>
 <form method="POST" action="/posts">
-    {{csrf_field()}}
+@csrf
     <div class="form-group">
         <label for="title">Title:</label>
         <input type="text" name="title" id="title" class="form-control" required/>
